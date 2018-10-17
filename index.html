@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login|register</title>
+    <link rel="stylesheet" href="//unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-bar">
+            <a href="#">
+                <span>Sign In</span>
+                <i class="fa fa-sign-in"></i>
+            </a>
+
+        </div>
+    </header>
+    <main class="">
+        <div class="flip-modal signin">
+            <div class="modal-register js-modal">
+                <a class="close" href="#">✖️</a>
+                <div class="modal-menu">
+                    <a href="#" class="text-signin">登录</a>
+                    <a href="#" class="text-register">注册</a>
+                </div>
+                <div class="errmsg"></div>
+                <form action="/register" method="POST">
+                    <div class="input-wrap">
+                        <div>
+                            <div class="input-field">
+                                <i class="fa fa-user-o"></i>
+                                <input type="text" name="username" placeholder="输入用户名" required>
+                            </div>
+                            <div class="input-field">
+                                <i class="fa fa-lock"></i>
+                                <input type="password" name="password" placeholder="输入密码" required>
+                            </div>
+                            <div class="input-field">
+                                <i class="fa fa-lock"></i>
+                                <input type="password" name="password2" placeholder="再次输入密码" required>
+                            </div>
+                            <div class="input-field">
+                                <input type="submit" value="注册">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-signin js-modal">
+                <a class="close" href="#">✖️</a>
+                <div class="modal-menu">
+                    <a href="#" class="text-signin js-active">登录</a>
+                    <a href="#" class="text-register">注册</a>
+                </div>
+                <div class="errmsg"></div>
+
+                <form action="/signin" method="POST">
+                    <div class="input-wrap">
+                        <div class="input-field">
+                            <i class="fa fa-user-o"></i>
+                            <input type="text" name="username" placeholder="输入用户名" required>
+                        </div>
+                        <div class="input-field">
+                            <i class="fa fa-lock"></i>
+                            <input type="password" name="password" placeholder="输入密码" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="submit" value="登录">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

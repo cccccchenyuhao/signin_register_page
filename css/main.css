@@ -1,0 +1,127 @@
+/* fullscreen, header, background */
+
+html, body, main {
+    height: 100%;
+}
+
+main {
+    background: #fff url(../img/bg.jpg) center/cover no-repeat;
+}
+
+header, main {
+    position: relative;
+}
+
+.header-bar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 9;
+}
+
+/* 登录注册切换 */
+
+.modal-register, .modal-signin {
+    position: absolute;
+    width: 400px;
+    padding: 16px;
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 9px 1px rgba(0, 0, 0, 0.4);
+    backface-visibility: hidden;
+}
+
+.signin .modal-signin, .register .modal-register {
+    transform: translate(-50%, -50%) rotateY(0deg);
+    transition: all 1s;
+}
+
+.signin .modal-register, .register .modal-signin {
+    transform: translate(-50%, -50%) rotateY(180deg);
+    transition: all 1s;
+}
+
+/* 选项切换 */
+
+.modal-menu {
+    text-align: center;
+}
+
+.modal-menu::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.modal-menu a {
+    font-weight: bold;
+    position: relative;
+    left: -20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+    color: #969696;
+}
+
+.modal-menu .js-active {
+    color: green;
+    font-size: 1.3em;
+    border-bottom: 2px solid;
+}
+
+/* 输入框样式 */
+
+.input-wrap {
+    padding: 0px 20px 20px 20px;
+    padding-top: 0;
+    width: 100%;
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    margin-top: 10px;
+}
+
+.input-field input[type="submit"] {
+    border: 1px solid transparent;
+    padding: 10px;
+    color: #fff;
+    background-color: green;
+    box-shadow: 0 2px 5px 0px rgba(13, 95, 45, 0.3);
+}
+
+.input-field i {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.errmsg {
+    font-size: 14px;
+    padding: 10px 20px 0 20px;
+    color: #ff9d00c7;
+}
+.close {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    font-size: 20px;
+}
+.flip-modal {
+    display: none;
+}
+
+.mask::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8)
+}
